@@ -42,7 +42,7 @@ def preprocessamento(input):
     for col in mtrans_colunas:
         df_pred[col] = 0
 
-    selected_mtrans_col = f'MTRANS_{df_pred['MTRANS'].iloc[0]}'
+    selected_mtrans_col = f"MTRANS_{df_pred['MTRANS'].iloc[0]}"
     if selected_mtrans_col in mtrans_colunas:
         df_pred[selected_mtrans_col] = 1
 
@@ -113,5 +113,4 @@ with st.sidebar:
         st.markdown('---')
         st.write(f'Nível de Obesidade Codificado: {pred_encoding}')
         st.caption('Verifique o IMC calculado: {:.2}'.format(df_processed['IMC'].iloc[0]))
-    
     
