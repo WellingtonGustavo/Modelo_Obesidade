@@ -6,7 +6,7 @@ import numpy as np
 st.title("🩺 Risco e Tipo de Obesidade")
 st.markdown("Preencha os dados do paciente")
 
-modelo_caminho = '../Models/random_forest_obesity_model.pkl'
+modelo_caminho = '../models/random_forest_obesity_model.pkl'
 
 @st.cache_data
 def carregar_modelo(caminho):
@@ -21,12 +21,12 @@ mapa_frequencia = {
     'no': 0,
     'Sometimes': 1,
     'Frequently': 2,
-    'Always': 4
+    'Always': 3
 }
 
 def preprocessamento(input):
     df_pred = pd.DataFrame([input])
-    df_pred['IMC'] = df_pred['Weight'] / (df_pred['Height'] * 2)
+    df_pred['IMC'] = df_pred['Weight'] / (df_pred['Height'] ** 2)
 
     df_pred['family_history_Encoding'] = df_pred['family_history'].map(mapa_binario)
     df_pred['FAVC_Encoding'] = df_pred['FAVC'].map(mapa_binario)
