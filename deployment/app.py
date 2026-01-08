@@ -25,7 +25,7 @@ mapa_frequencia = {
 }
 
 colunas_finais = [
-    'Age', 'Height', 'Weight', 'FCVC', 'NCP', 'CH20', 'FAF',
+    'Age', 'Height', 'Weight', 'FCVC', 'NCP', 'CH2O', 'FAF',
     'TUE', 'IMC', 'family_history_Encoding', 'FAVC_Encoding',
     'SMOKE_Encoding', 'Gender_Encoding', 'SCC_Encoding', 'CAEC_Encoding', 'CALC_Encoding',
     'MTRANS_Automobile', 'MTRANS_Bike', 'MTRANS_Motorbike', 'MTRANS_Public_Transportation', 'MTRANS_Walking'
@@ -75,7 +75,7 @@ with st.sidebar:
 
     FCVC = st.slider('Frequência de Consumo de Vegetais (1=Nunca, 3=Sempre):', 1.0, 3.0, 2.0, 0.5)
     NCP = st.slider('Frequência de Refeições Pricipais (1=Mínimo, 4=Máximo):', 1.0, 4.0, 3.0, 0.5)
-    CH20 = st.slider('Frequência de Consumo de Água (1=Mínimo, 3=Máximo):', 1.0, 3.0, 2.0, 0.5)
+    CH2O = st.slider('Frequência de Consumo de Água (1=Mínimo, 3=Máximo):', 1.0, 3.0, 2.0, 0.5)
     FAF = st.slider('Frequência de Atividade Física (0=Nenhuma, 3=Diariamente):', 0.0, 3.0, 1.0, 0.5)
     TUE = st.slider('Tempo de Uso de Aparelhos Eletrônicos (0=Mínimo, 2=Muito):', 0.0, 2.0, 1.0, 0.5)
 
@@ -89,7 +89,7 @@ with st.sidebar:
         input_data = {
             'Gender': Gender, 'Age': Age, 'Height': Height, 'Weight': Weight,
             'family_history': family_history, 'FAVC': FAVC, 'FCVC': FCVC, 'NCP': NCP,
-            'CAEC': CAEC, 'SMOKE': SMOKE, 'CH20': CH20, 'SCC': SCC, 'FAF': FAF,
+            'CAEC': CAEC, 'SMOKE': SMOKE, 'CH2O': CH2O, 'SCC': SCC, 'FAF': FAF,
             'TUE': TUE, 'CALC': CALC, 'MTRANS': MTRANS
         }
 
