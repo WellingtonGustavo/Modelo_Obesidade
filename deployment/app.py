@@ -6,7 +6,7 @@ import numpy as np
 st.title("🩺 Risco e Tipo de Obesidade")
 st.markdown("Preencha os dados do paciente")
 
-modelo_caminho = '../models/random_forest_obesity_model.pkl'
+modelo_caminho = 'models/random_forest_obesity_model.pkl'
 
 @st.cache_data
 def carregar_modelo(caminho):
