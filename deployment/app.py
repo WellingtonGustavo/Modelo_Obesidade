@@ -24,6 +24,13 @@ mapa_frequencia = {
     'Always': 3
 }
 
+colunas_finais = [
+    'Age', 'Height', 'Weight', 'FCVC', 'NCP', 'CH20', 'FAF',
+    'TUE', 'IMC', 'family_history_Encoding', 'FAVC_Encoding',
+    'SMOKE_Encoding', 'Gender_Encoding', 'SCC_Encoding', 'CAEC_Encoding', 'CALC_Encoding',
+    'MTRANS_Automobile', 'MTRANS_Bike', 'MTRANS_Motorbike', 'MTRANS_Public_Transportation', 'MTRANS_Walking'
+]
+
 def preprocessamento(input):
     df_pred = pd.DataFrame([input])
     df_pred['IMC'] = df_pred['Weight'] / (df_pred['Height'] ** 2)
@@ -46,10 +53,7 @@ def preprocessamento(input):
     if selected_mtrans_col in mtrans_colunas:
         df_pred[selected_mtrans_col] = 1
 
-    colunas_originais = ['Gender', 'family_history', 'FAVC', 'CAEC', 'SMOKE',
-                         'SCC', 'CALC', 'MTRANS', 'Height', 'Weight']
-    
-    df_final = df_pred.drop(columns=colunas_originais, errors='ignore')
+    df_final = df_pred[colunas_finais]
 
     return df_final
 
