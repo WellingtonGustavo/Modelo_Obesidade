@@ -1,4 +1,4 @@
-# 📈 Projeto de Análise e Previsão de Obesidade (Nome do Projeto)
+# 📈 Projeto de Análise e Previsão de Obesidade
 
 ## 🎯 Desafio de Negócios
 ## 🧠 Metodologia Técnica e Ferramentas
